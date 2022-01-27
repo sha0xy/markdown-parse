@@ -21,7 +21,7 @@ public class MarkdownParse {
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
             // value of index at the end of the loop
-            System.out.println(currentIndex);
+            //System.out.println(currentIndex);
         }
         return toReturn;
     }
@@ -30,5 +30,6 @@ public class MarkdownParse {
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = getLinks(contents);
         System.out.println(links);
+        System.out.println("hi");
     }
 }
