@@ -58,6 +58,7 @@ public class MarkdownParseTest {
         String contents = Files.readString(fileName);
         ArrayList <String> links = MarkdownParse.getLinks(contents);
         ArrayList <String> list = new ArrayList<String>();
+        list.add("page.com");
         assertEquals(list, links);
     }
 
@@ -67,7 +68,6 @@ public class MarkdownParseTest {
         String contents = Files.readString(fileName);
         ArrayList <String> links = MarkdownParse.getLinks(contents);
         ArrayList <String> list = new ArrayList<String>();
-        list.add("page.com");
         assertEquals(list, links);
     }
 
