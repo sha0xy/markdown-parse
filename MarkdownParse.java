@@ -24,13 +24,13 @@ public class MarkdownParse {
                 break;
             }
 
-            if (!markdown.substring(nextOpenBracket - 1, nextOpenBracket).equals("!")){
-                System.out.println(markdown.substring(nextOpenBracket - 1, nextOpenBracket));
+            if (nextOpenBracket == 0) {
+                toReturn.add(markdown.substring(openParen + 1, closeParen));
+            } else if(!markdown.substring(nextOpenBracket - 1, nextOpenBracket).equals("!")){
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             }
 
             currentIndex = closeParen + 1;
-            System.out.println("Value of currentIndex at end of loop: "+currentIndex);
         }
         return toReturn;
     }
