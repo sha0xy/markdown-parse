@@ -1,5 +1,5 @@
 import static org.junit.Assert.*;
-<<<<<<< HEAD
+
 import org.junit.*;
 import java.util.ArrayList;
 import java.nio.file.Files;
@@ -8,7 +8,6 @@ import java.io.IOException;
 
 public class MarkdownParseTest {
 
-=======
 import java.io.IOException;
 import org.junit.*;
 import java.nio.file.Files;
@@ -16,7 +15,6 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 
 public class MarkdownParseTest {
->>>>>>> a09d5d646b9ee2be55cb7289a6e927e1af8ea173
     @Test
     public void addition() {
         assertEquals(2, 1 + 1);
@@ -26,7 +24,7 @@ public class MarkdownParseTest {
     public void getLinksTest() throws IOException{
         Path fileName = Path.of("test-file.md");
         String contents = Files.readString(fileName);
-<<<<<<< HEAD
+
         ArrayList <String> links = MarkdownParse.getLinks(contents);
         ArrayList <String> list = new ArrayList<String>();
         list.add("https://something.com");
@@ -40,16 +38,16 @@ public class MarkdownParseTest {
         String contents = Files.readString(fileName);
         ArrayList <String> links = MarkdownParse.getLinks(contents);
         ArrayList <String> list = new ArrayList<String>();
-=======
+
         ArrayList<String> links = MarkdownParse.getLinks(contents);
 
         ArrayList<String> list = new ArrayList<String>();
->>>>>>> a09d5d646b9ee2be55cb7289a6e927e1af8ea173
+
         list.add("https://something.com");
         list.add("some-page.html");
         assertEquals(list, links);
     }
-<<<<<<< HEAD
+
 
     @Test
     public void testfile3Test() throws IOException{
@@ -108,8 +106,3 @@ public class MarkdownParseTest {
     }
 
 }
-
-
-=======
-}
->>>>>>> a09d5d646b9ee2be55cb7289a6e927e1af8ea173

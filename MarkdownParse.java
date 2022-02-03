@@ -18,24 +18,20 @@ public class MarkdownParse {
             int nextCloseBracket = markdown.indexOf("]", nextOpenBracket);
             int openParen = markdown.indexOf("(", nextCloseBracket);
             int closeParen = markdown.indexOf(")", openParen);
-<<<<<<< HEAD
-=======
 
->>>>>>> a09d5d646b9ee2be55cb7289a6e927e1af8ea173
             if ((nextOpenBracket == -1) || (nextCloseBracket == -1) 
             || (openParen == -1) || (closeParen == -1)) {
                 break;
             }
 
-<<<<<<< HEAD
 
             if (nextOpenBracket != 0 && !markdown.substring(nextOpenBracket - 1, nextOpenBracket).equals("!")){
                 System.out.println(markdown.substring(nextOpenBracket - 1, nextOpenBracket));
-=======
+            }
             if (nextOpenBracket == 0) {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             } else if(!markdown.substring(nextOpenBracket - 1, nextOpenBracket).equals("!")){
->>>>>>> a09d5d646b9ee2be55cb7289a6e927e1af8ea173
+
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             }
 
