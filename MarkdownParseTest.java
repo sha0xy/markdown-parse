@@ -7,14 +7,6 @@ import java.nio.file.Path;
 import java.io.IOException;
 
 public class MarkdownParseTest {
-
-import java.io.IOException;
-import org.junit.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.ArrayList;
-
-public class MarkdownParseTest {
     @Test
     public void addition() {
         assertEquals(2, 1 + 1);
@@ -38,10 +30,6 @@ public class MarkdownParseTest {
         String contents = Files.readString(fileName);
         ArrayList <String> links = MarkdownParse.getLinks(contents);
         ArrayList <String> list = new ArrayList<String>();
-
-        ArrayList<String> links = MarkdownParse.getLinks(contents);
-
-        ArrayList<String> list = new ArrayList<String>();
 
         list.add("https://something.com");
         list.add("some-page.html");
